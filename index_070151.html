@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10Games Website</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font and general body layout */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Ensure the body takes full viewport height and centers content */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* Updated background color to precisely match the blue from the provided image */
+            background-color: #369AEF; /* Hex code directly from the image */
+            padding: 1rem; /* Add some padding for small screens */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+    <!-- Image at the top - Max-width adjusted for smaller size -->
+    <img src="https://i.postimg.cc/V5yhnGG4/1749048439419-edit-9480338492216-1-1.png" alt="10Games Logo" class="w-full max-w-xs rounded-lg shadow-lg mb-8">
+
+    <!-- Welcome heading - Text color adjusted for contrast with the new blue background -->
+    <h1 class="text-4xl font-extrabold text-white mb-4 text-center">Welcome to the 10Games Website</h1>
+
+    <!-- Site Description - Text color adjusted for contrast with the new blue background -->
+    <p class="text-gray-100 text-lg text-center max-w-2xl mb-8 leading-relaxed">
+        Discover a comprehensive gaming hub where you can access the 10Games website directly or download the official APK for an immersive gaming experience on your device. Get ready to dive into a world of fun and excitement!
+    </p>
+
+    <!-- Buttons container -->
+    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+        <!-- 10Games Link Button (Darker shade of blue for contrast) -->
+        <button class="px-8 py-4 rounded-lg font-bold text-white shadow-lg transition duration-300 ease-in-out hover:scale-105 bg-[#2C7CBF] hover:bg-[#256BA5] focus:outline-none focus:ring-4 focus:ring-[#2C7CBF]/50">
+            <a href="https://zhvan14.github.io/10Games/10Games.html" class="block w-full h-full text-center no-underline text-white">
+                10Games Link
+            </a>
+        </button>
+
+        <!-- 10Games APK Download Button (Vibrant Green) -->
+        <button class="px-8 py-4 rounded-lg font-bold text-white shadow-lg transition duration-300 ease-in-out hover:scale-105 bg-[#7ED321] hover:bg-[#68B71C] focus:outline-none focus:ring-4 focus:ring-[#7ED321]/50">
+            <a href="https://zhvan14.github.io/10GamesDownload/10GamesDownloadCode.html" class="block w-full h-full text-center no-underline text-white">
+                10Games APK Download
+            </a>
+        </button>
+    </div>
+</body>
+</html>

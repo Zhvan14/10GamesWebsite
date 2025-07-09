@@ -1,0 +1,177 @@
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* More vibrant background gradient */
+    background: linear-gradient(135deg, #e0f2fe, #bbdefb, #90caf9); /* Lighter blues for a fresh feel */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll on animations */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 3rem; /* Increased padding */
+    border-radius: 2rem; /* Even more rounded corners */
+    /* More pronounced, layered shadow for depth */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 52rem; /* Slightly wider container */
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem; /* Increased gap */
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); /* Smoother transition curve */
+    position: relative; /* For potential future pseudo-elements */
+}
+
+.container:hover {
+    transform: translateY(-0.5rem) scale(1.01); /* Lift and slight scale on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 2.5rem; /* Increased margin-bottom */
+    border-radius: 1.5rem; /* More rounded image */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Stronger image shadow */
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.responsive-image:hover {
+    transform: translateY(-0.625rem) rotateZ(-1deg); /* More dynamic lift and slight rotation */
+}
+
+h1 {
+    font-size: 3.8rem; /* Larger heading */
+    font-weight: 900; /* Even bolder */
+    color: #1a202c;
+    line-height: 1.1; /* Tighter line height */
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.05em; /* Tighter letter spacing for impact */
+    animation: fadeInScale 1s ease-out forwards; /* New animation */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05); /* Subtle text shadow */
+}
+
+h1 .highlight {
+    color: #4285F4; /* The specified blue color */
+}
+
+p {
+    font-size: 1.25rem; /* Larger paragraph text */
+    color: #4a5568;
+    margin-bottom: 2.5rem; /* Increased margin-bottom */
+    max-width: 36rem; /* Wider paragraph */
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1s ease-out 0.3s forwards; /* Delayed animation */
+    opacity: 0;
+    line-height: 1.6;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .button-group {
+        flex-direction: row;
+        gap: 2rem; /* Increased gap between buttons on larger screens */
+    }
+}
+
+.modern-button {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: white;
+    font-weight: 700;
+    padding: 1.25rem 2.5rem; /* Larger padding for buttons */
+    border-radius: 9999px;
+    /* More prominent button shadow */
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); /* Smoother transition */
+    cursor: pointer;
+    outline: none;
+    border: none; /* Ensure no default border */
+}
+
+.modern-button:hover {
+    transform: translateY(-0.5rem); /* More noticeable lift */
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.modern-button:active {
+    transform: translateY(0) scale(0.96); /* Press down effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modern-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%); /* More visible shine */
+    transform: translateX(-100%);
+    transition: transform 0.6s ease-out; /* Slower shine effect */
+    z-index: -1;
+}
+.modern-button:hover::before {
+    transform: translateX(0);
+}
+
+.modern-button.blue {
+    /* Deeper, more vibrant blue gradient */
+    background: linear-gradient(to right, #4285F4, #1a5acb);
+}
+.modern-button.blue:focus {
+    box-shadow: 0 0 0 5px rgba(66, 133, 244, 0.6); /* Thicker focus ring */
+}
+
+.modern-button.green {
+    /* Vibrant green gradient */
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+}
+.modern-button.green:focus {
+    box-shadow: 0 0 0 5px rgba(46, 204, 113, 0.6);
+}
+
+.modern-button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(1.5rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9) translateY(1.5rem); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+.animate-fade-in-delay {
+    animation: fadeIn 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+}
